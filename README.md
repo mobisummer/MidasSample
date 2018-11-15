@@ -30,7 +30,7 @@ Midas.init(this, APP_ID);
 
 这个过程中，需要您的服务器与Midas服务器对接，发送你的`userId`以获取Midas的`userToken`及`midasUserId`。
 
-详情请见这里：[服务器对接](http://dummy.com)
+详情请见这里：[服务器对接](https://github.com/mobisummer/MidasSample/wiki/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AF%B9%E6%8E%A5)
 
 获取到`userToken`及`midasUserId`后，进行绑定用户的操作。
 
