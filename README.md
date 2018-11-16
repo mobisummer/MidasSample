@@ -6,7 +6,7 @@
 
 ### 介绍
 
-> TODO
+Midas SDK
 
 ### 接入
 
@@ -38,7 +38,7 @@ Midas.init(this, APP_ID);
  MidasUser user = new MidasUser.Builder()
          .midasUserId(midasUserId) //必须
          .userToken(userToken) //必须
-         .nickName("Toby")
+         .nickName("Toby") //补充用户信息以便于优化商品的显示
          .age(18)
          .avatar("https://xxx.com/xxx.jpg")
          .gender(MidasUser.MALE)
