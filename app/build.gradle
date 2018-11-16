@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'midas'
+            keyPassword '123456'
+            storeFile file('../test.keystore')
+            storePassword '123456'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.ms.midassample"
@@ -12,7 +20,8 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            signingConfig signingConfigs.config
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
