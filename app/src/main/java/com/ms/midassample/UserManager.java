@@ -32,4 +32,8 @@ public class UserManager {
         SPUtils.clearUser();
         Midas.unbindUser();
     }
+
+    static boolean isUserLogin() {
+        return SPUtils.isUserLogin();
+    }
 }

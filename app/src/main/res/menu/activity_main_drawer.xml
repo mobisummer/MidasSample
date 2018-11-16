@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_index"
+            android:icon="@drawable/ic_menu_index"
+            android:title="商城" />
+        <item
+            android:id="@+id/nav_goods"
+            android:enabled="false"
+            android:icon="@drawable/ic_menu_goods"
+            android:title="Goods" />
+        <item
+            android:id="@+id/nav_order"
+            android:enabled="false"
+            android:icon="@drawable/ic_menu_order"
+            android:title="Order" />
+    </group>
+
+    <item android:title="Support">
+        <menu>
+            <item
+                android:id="@+id/nav_custom_service"
+                android:enabled="false"
+                android:icon="@drawable/ic_menu_custom_service"
+                android:title="CustomService" />
+            <item
+                android:id="@+id/nav_about"
+                android:enabled="false"
+                android:icon="@drawable/ic_menu_about"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>
