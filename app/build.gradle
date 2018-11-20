@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+def getDate() {
+    return new Date().format('yyyyMMdd')
+}
 
 android {
     signingConfigs {
@@ -16,18 +19,18 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0.0"
-        archivesBaseName = "$archivesBaseName-$versionName"
+        archivesBaseName = "MidasSample_"+SDK_VERSION_NAME+"_"+getDate()
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
-            buildConfigField 'String', 'SDK_VERSION_NAME', SDK_VERSION_NAME
+            buildConfigField 'String', 'SDK_VERSION_NAME', "\"SDK_VERSION_NAME\""
             signingConfig signingConfigs.config
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            buildConfigField 'String', 'SDK_VERSION_NAME', SDK_VERSION_NAME
+            buildConfigField 'String', 'SDK_VERSION_NAME', "\"SDK_VERSION_NAME\""
         }
     }
 }
