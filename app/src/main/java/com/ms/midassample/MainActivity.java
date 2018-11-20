@@ -129,18 +129,6 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressLint("SetTextI18n")
     private void updateLoginStatus() {
-        final ProgressDialog dialog = new ProgressDialog(this);
-        dialog.setTitle("Checking Login Status");
-        dialog.setMessage("Please Waiting");
-        dialog.setCancelable(false);
-        dialog.show();
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                dialog.dismiss();
-            }
-        }, 4000);
 
         if (SPUtils.isUserLogin()) {
             btnLogin.setVisibility(View.GONE);
