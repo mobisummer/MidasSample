@@ -24,13 +24,13 @@ android {
     }
     buildTypes {
         release {
-            buildConfigField 'String', 'SDK_VERSION_NAME', "\"SDK_VERSION_NAME\""
+            buildConfigField 'String', 'SDK_VERSION_NAME', "\"$SDK_VERSION_NAME\""
             signingConfig signingConfigs.config
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            buildConfigField 'String', 'SDK_VERSION_NAME', "\"SDK_VERSION_NAME\""
+            buildConfigField 'String', 'SDK_VERSION_NAME', "\"$SDK_VERSION_NAME\""
         }
     }
 }
