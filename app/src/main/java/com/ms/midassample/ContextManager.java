@@ -21,6 +21,11 @@ import android.view.Window;
 import android.view.WindowManager;
 
 public final class ContextManager {
+    private static Context sAppContext;
+
+    // app scope
+    private static Activity sActivity;
+
     public static void init(@NonNull Context context) {
         sAppContext = context.getApplicationContext();
 
@@ -28,10 +33,6 @@ public final class ContextManager {
             sAppContext = context;
         }
     }
-
-    // app scope
-
-    private static Context sAppContext;
 
     /**
      * Use this as possible instead of {@link #activity()}
@@ -87,14 +88,12 @@ public final class ContextManager {
         return sAppContext.startService(intent);
     }
 
+    // activity scope
+
     @TargetApi(Build.VERSION_CODES.M)
     public static boolean checkSelfPermission(String name) {
         return (sAppContext.checkSelfPermission(name) == PackageManager.PERMISSION_GRANTED);
     }
-
-    // activity scope
-
-    private static Activity sActivity;
 
     public static void update(Activity activity) {
         sActivity = activity;

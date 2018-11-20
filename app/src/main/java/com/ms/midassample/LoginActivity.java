@@ -10,9 +10,6 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.ms.midas.Midas;
-import com.ms.midas.MidasUser;
-
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -42,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         String password = etPassword.getText().toString();
         //do you login here , and get MidasUserInfo
 
-        UserManager.doLogin(userName,password);
+        UserManager.doLogin(userName, password);
 
         Intent intent = new Intent();
         setResult(Activity.RESULT_OK, intent);
