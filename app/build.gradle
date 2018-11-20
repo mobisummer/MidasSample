@@ -19,7 +19,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0.0"
-        archivesBaseName = "MidasSample_"+SDK_VERSION_NAME+"_"+getDate()
+        archivesBaseName = "MidasSample_v"+SDK_VERSION_NAME+"_"+getDate()
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
