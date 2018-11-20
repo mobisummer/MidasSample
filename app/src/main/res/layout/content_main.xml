@@ -7,50 +7,61 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_main">
+
     <ImageView
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg"
+        android:id="@+id/iv_bg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:scaleType="centerCrop" />
 
     <LinearLayout
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
-            android:textStyle="bold"
-            android:textSize="24sp"
-            android:layout_width="wrap_content"
-            tools:text="Haven't login"
             android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
-            android:layout_height="wrap_content"
-            tools:ignore="HardcodedText" />
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            tools:text="Haven't login" />
 
         <Button
-            android:textColor="@android:color/white"
-            android:background="@color/colorAccent"
             android:id="@+id/btn_login"
-            android:text="Login"
-            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="Login"
+            android:textColor="@android:color/white"
             tools:ignore="HardcodedText" />
 
         <Button
-            android:visibility="gone"
-            android:textColor="@android:color/white"
-            android:background="@color/colorAccent"
             android:id="@+id/btn_logout"
-            android:text="LogOut"
-            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="LogOut"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
             tools:ignore="HardcodedText" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sdk_version"
+        android:textColor="#ffffff"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="10dp"
+        tools:text="SDK Version : v1.1.2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 </FrameLayout>

@@ -3,6 +3,7 @@ package com.ms.midassample;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        ((TextView) findViewById(R.id.tv_sdk_version)).setText(String.format("SDK VERSION : %s", BuildConfig.SDK_VERSION_NAME));
 
         tvHint = findViewById(R.id.tv_status);
         btnLogin = findViewById(R.id.btn_login);
@@ -97,6 +100,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_order:
             case R.id.nav_custom_service:
             case R.id.nav_about:
+
             default:
                 Toast.makeText(this, "only support Index now", Toast.LENGTH_SHORT).show();
         }
@@ -119,6 +123,10 @@ public class MainActivity extends AppCompatActivity
             case R.id.btn_logout:
                 UserManager.doLogout();
                 updateLoginStatus();
+                break;
+            case R.id.tv_github:
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/mobisummer/MidasSample"));
+                startActivity(browserIntent);
                 break;
             default:
         }

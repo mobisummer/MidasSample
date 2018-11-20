@@ -5,7 +5,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Midas Demo</string>
-    <string name="nav_header_subtitle">SDK v1.1.1</string>
+    <string name="nav_header_subtitle"><u>https://github.com/mobisummer/MidasSample</u></string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="title_activity_login">Sign in</string>
 
