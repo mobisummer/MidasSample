@@ -1,6 +1,6 @@
 # Midas-SDK接入文档
 
-[![Download](https://api.bintray.com/packages/mobisummer/maven/midassdk/images/download.svg?version=1.1.1)](https://bintray.com/mobisummer/maven/midassdk/1.1.0/link)
+[![Download](https://api.bintray.com/packages/mobisummer/maven/midassdk/images/download.svg?version=1.1.2)](https://bintray.com/mobisummer/maven/midassdk/1.1.2/link)
 
 
 
@@ -13,7 +13,7 @@ Midas SDK
 #### 1.Gradle引用
 
 ```groovy
-implementation 'com.ms:midassdk:1.1.1'
+implementation 'com.ms:midassdk:1.1.2'
 ```
 
 #### 2.初始化
