@@ -1,8 +1,11 @@
 package com.ms.midassample;
 
 import android.app.Application;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.ms.midas.Midas;
+import com.ms.midas.MidasListener;
 
 /**
  * @author Toby
@@ -15,6 +18,5 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
         ContextManager.init(this);
-        Midas.init(this, APP_ID);
     }
 }
