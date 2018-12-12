@@ -1,8 +1,6 @@
 # Midas-SDK接入文档
 
-[![Download](https://api.bintray.com/packages/mobisummer/maven/midassdk/images/download.svg?version=1.1.2)](https://bintray.com/mobisummer/maven/midassdk/1.1.2/link)
-
-
+[![Download](https://api.bintray.com/packages/mobisummer/maven/midassdk/images/download.svg?version=1.1.3)](https://bintray.com/mobisummer/maven/midassdk/1.1.3/link)
 
 ### 介绍
 
@@ -13,15 +11,26 @@ Midas SDK
 #### 1.Gradle引用
 
 ```groovy
-implementation 'com.ms:midassdk:1.1.2'
+implementation 'com.ms:midassdk:1.1.3'
 ```
 
 #### 2.初始化
 
 建议在Application中初始化，`APP_ID`请联系商务获取。
 
+请在初始化之后再进行其他Midas相关的操作（如绑定用户，打开商城页等）。
+
 ```java
-Midas.init(this, APP_ID);
+ Midas.init(this, APP_ID, new MidasListener() {
+     @Override
+     public void onSucceed() {
+
+     }
+     @Override
+     public void onFailed(String error) {
+
+     }
+ });
 ```
 
 #### 3.绑定用户
@@ -58,7 +67,7 @@ Midas.init(this, APP_ID);
 
 > 目前只支持通过启动Activity的方式来打开商城
 
-请在初始化之后再调用此方法。
+请在初始化之后再调用此方法。如果初始化没完成，则不会打开商城
 
 ```java
  Midas.show();
