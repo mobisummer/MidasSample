@@ -1,17 +1,12 @@
 package com.ms.midassample;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.ms.midas.Midas;
-import com.ms.midas.MidasListener;
 
 /**
  * @author Toby
@@ -33,30 +28,14 @@ public class SplashActivity extends AppCompatActivity {
         tvSdkVersion = findViewById(R.id.tv_sdk_version);
         tvSdkVersion.setText(String.format("SDK VERSION : %s", BuildConfig.SDK_VERSION_NAME));
         tvHint = findViewById(R.id.tv_hint);
-        Midas.init(this, APP_ID, new MidasListener() {
-            @Override
-            public void onSucceed() {
-                Toast.makeText(SplashActivity.this, "success", Toast.LENGTH_SHORT).show();
-                Log.i(TAG, "onSucceed");
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Midas.show();
-                        SplashActivity.this.finish();
-                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                    }
-                }, 3000);
-            }
 
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onFailed(String s) {
-                Log.e(TAG, "onFailed: " + s);
-                tvHint.setText("Init Failed , due to " + s +" Please Restart App to Continue");
+            public void run() {
+                startActivity(new Intent(SplashActivity.this, WebActivity.class));
+                SplashActivity.this.finish();
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
-        });
-
-        if (!UserManager.isUserLogin()) {
-            UserManager.doLogin("Mobisummer", "123456");
-        }
+        }, 3000);
     }
 }

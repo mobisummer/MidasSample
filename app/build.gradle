@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+
 def getDate() {
     return new Date().format('yyyyMMdd')
 }
@@ -14,12 +15,12 @@ android {
     }
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.ms.midassample"
+        applicationId "com.ms.midassample2"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0.0"
-        archivesBaseName = "MidasSample_v"+SDK_VERSION_NAME+"_"+getDate()
+        archivesBaseName = "MidasSample_v" + SDK_VERSION_NAME + "_" + getDate()
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
