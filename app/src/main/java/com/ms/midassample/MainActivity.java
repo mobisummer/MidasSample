@@ -96,6 +96,12 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_index:
                 Midas.show();
                 break;
+            case R.id.nav_icon:
+                MidasIconActivity.start(this);
+                break;
+            case R.id.nav_banner:
+                MidasBannerActivity.start(this);
+                break;
             case R.id.nav_goods:
             case R.id.nav_order:
             case R.id.nav_custom_service:

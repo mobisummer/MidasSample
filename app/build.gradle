@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+
 def getDate() {
     return new Date().format('yyyyMMdd')
 }
@@ -19,7 +20,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0.0"
-        archivesBaseName = "MidasSample_v"+SDK_VERSION_NAME+"_"+getDate()
+        archivesBaseName = "MidasSample_v" + SDK_VERSION_NAME + "_" + getDate()
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -44,5 +45,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'com.ms:midassdk:1.1.9'
+    implementation 'com.ms:midassdk:1.2.1'
 }
