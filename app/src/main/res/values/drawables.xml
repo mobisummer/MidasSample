@@ -10,4 +10,6 @@
     <item name="ic_menu_order" type="drawable">@drawable/ic_shopping_basket_black_24dp</item>
     <item name="ic_menu_custom_service" type="drawable">@drawable/ic_face_black_24dp</item>
     <item name="ic_menu_about" type="drawable">@drawable/ic_info_outline_black_24dp</item>
+    <item name="ic_menu_icon" type="drawable">@drawable/ic_crop_square_black_24dp</item>
+    <item name="ic_menu_banner" type="drawable">@drawable/ic_crop_7_5_black_24dp</item>
 </resources>

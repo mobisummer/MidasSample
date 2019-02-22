@@ -9,6 +9,14 @@
             android:icon="@drawable/ic_menu_index"
             android:title="商城" />
         <item
+          android:id="@+id/nav_icon"
+          android:icon="@drawable/ic_menu_icon"
+          android:title="MidasIcon" />
+        <item
+          android:id="@+id/nav_banner"
+          android:icon="@drawable/ic_menu_banner"
+          android:title="MidasBanner" />
+        <item
             android:id="@+id/nav_goods"
             android:enabled="false"
             android:icon="@drawable/ic_menu_goods"

@@ -1,6 +1,6 @@
 # Midas-SDK接入文档
 
-[![Download](https://api.bintray.com/packages/mobisummer/maven/midassdk/images/download.svg?version=1.1.9)](https://bintray.com/mobisummer/maven/midassdk/1.1.9/link)
+[![Download](https://api.bintray.com/packages/mobisummer/maven/midassdk/images/download.svg?version=1.2.1)](https://bintray.com/mobisummer/maven/midassdk/1.2.1/link)
 
 ### 介绍
 
@@ -11,7 +11,7 @@ Midas SDK
 #### 1.Gradle引用
 
 ```groovy
-implementation 'com.ms:midassdk:1.1.9'
+implementation 'com.ms:midassdk:1.2.1'
 ```
 
 #### 2.初始化
@@ -73,6 +73,48 @@ implementation 'com.ms:midassdk:1.1.9'
  Midas.show();
 ```
 
+#### 6.CreativeView（MidasIcon、MidasBanner）
+请在初始化之后再调用load(), 否则无法加载。
+
+特性：
+1) MidasIcon宽高比例为1:1
+2) MidasBanner宽高比例为720:372
+3) 如果宽为精准尺寸高为最大尺寸，则会以宽为基准测量高。
+4) 如果高为精准尺寸宽为最大尺寸，则会以高为基准测量宽。
+5) 如果宽高都为精准尺寸，则不会按照比例测量
+6) 点击跳转商场页
+
+使用：
+```java
+        mMidasIcon = new MidasIcon(this);
+        mMidasIcon.setCreativeListener(new CreativeListener() {
+            @Override
+            public void onCreativeError(View view, int errorCode, String errorMsg) {
+
+            }
+
+            @Override
+            public void onCreativeLoaded(View view) {
+                mFrameLayout.addView(view);
+            }
+
+            @Override
+            public void onCreativeShowed(View view) {
+
+            }
+
+            @Override
+            public void onCreativeClosed(View view) {
+
+            }
+
+            @Override
+            public void onCreativeClicked(View view) {
+
+            }
+        });
+        mMidasIcon.load();
+```
 
 
 
