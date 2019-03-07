@@ -33,17 +33,7 @@ implementation 'com.ms:midassdk:1.2.2'
  });
 ```
 
-#### 3.打开商城页
-
-> 目前只支持通过启动Activity的方式来打开商城
-
-请在初始化之后再调用此方法。如果初始化没完成，则不会打开商城
-
-```java
- Midas.show();
-```
-
-#### 4.CreativeView（MidasIcon、MidasBanner）
+#### 3.CreativeView（MidasIcon、MidasBanner）
 请在初始化之后再调用load(), 否则无法加载。
 
 特性：
