@@ -1,6 +1,6 @@
 # Midas-SDK接入文档
 
-[![Download](https://api.bintray.com/packages/mobisummer/maven/midassdk/images/download.svg?version=1.2.2)](https://bintray.com/mobisummer/maven/midassdk/1.2.2/link)
+[![Download](https://api.bintray.com/packages/mobisummer/maven/midassdk/images/download.svg?version=1.2.4)](https://bintray.com/mobisummer/maven/midassdk/1.2.4/link)
 
 ### 介绍
 
@@ -11,7 +11,7 @@ Midas SDK
 #### 1.Gradle引用
 
 ```groovy
-implementation 'com.ms:midassdk:1.2.2'
+implementation 'com.ms:midassdk:1.2.4'
 ```
 
 #### 2.初始化
@@ -42,7 +42,8 @@ implementation 'com.ms:midassdk:1.2.2'
 3) 如果宽为精准尺寸高为最大尺寸，则会以宽为基准测量高。
 4) 如果高为精准尺寸宽为最大尺寸，则会以高为基准测量宽。
 5) 如果宽高都为精准尺寸，则不会按照比例测量
-6) 点击跳转商场页
+6) 如果宽高都为未指定尺寸，则会按照原本图片大小测量
+7) 点击跳转商场页
 
 使用：
 ```java

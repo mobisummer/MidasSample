@@ -15,6 +15,7 @@ public class MidasBannerActivity extends AppCompatActivity {
 
     private static final String TAG = MidasBannerActivity.class.getName();
     private MidasBanner mMidasBanner;
+    private FrameLayout midasBannerLayout;
 
     static void start(Activity activity) {
         Intent intent = new Intent(activity, MidasBannerActivity.class);
@@ -25,7 +26,8 @@ public class MidasBannerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_midas_banner);
-        mMidasBanner = findViewById(R.id.banner);
+        midasBannerLayout = findViewById(R.id.fl_banner);
+        mMidasBanner = new MidasBanner(this);
         mMidasBanner.setCreativeListener(new CreativeListener() {
             @Override
             public void onCreativeError(View view, int errorCode, String errorMsg) {
@@ -35,6 +37,7 @@ public class MidasBannerActivity extends AppCompatActivity {
             @Override
             public void onCreativeLoaded(View view) {
                 Log.d(TAG, "MidasIcon Loaded");
+                midasBannerLayout.addView(view);
             }
 
             @Override
