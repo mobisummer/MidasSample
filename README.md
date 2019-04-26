@@ -91,6 +91,8 @@ creativeView.setEnableAutoLoad(true);
 ```java
 //默认为true
 creativeView.setEnableAutoRecycle(false);
+//手动回收
+creativeView.recycle()
 ```
 
 
