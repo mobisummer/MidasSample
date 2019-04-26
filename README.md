@@ -1,6 +1,6 @@
 # Midas-SDK接入文档
 
-[![Download](https://api.bintray.com/packages/mobisummer/maven/midassdk/images/download.svg?version=1.3.3)](https://bintray.com/mobisummer/maven/midassdk/1.3.3/link)
+[![Download](https://api.bintray.com/packages/mobisummer/maven/midassdk/images/download.svg?version=1.3.6)](https://bintray.com/mobisummer/maven/midassdk/1.2.7/link)
 
 ### 介绍
 
@@ -11,7 +11,7 @@ Midas SDK
 #### 1.Gradle引用
 
 ```groovy
-implementation 'com.ms:midassdk:1.3.3'
+implementation 'com.ms:midassdk:1.3.6'
 ```
 
 #### 2.初始化
@@ -77,8 +77,20 @@ implementation 'com.ms:midassdk:1.3.3'
         mMidasIcon.load();
 ```
 
+##### 3.1 可配置项
 
+1. 自动加载图片
 
+```java
+//默认为false
+creativeView.setEnableAutoLoad(true);
+```
 
+2. 自动回收
+
+```java
+//默认为true
+creativeView.setEnableAutoRecycle(false);
+```
 
 
